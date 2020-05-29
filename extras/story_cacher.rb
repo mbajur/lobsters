@@ -46,7 +46,7 @@ class StoryCacher
         content.gsub!("\n\n\n", "\n\n")
       end
 
-      return content
+      return RemoveEmoji::Sanitize.call(content)
 
     rescue => e
       Rails.logger.error "error fetching #{story.url}: #{e.message}"
