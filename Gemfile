@@ -42,6 +42,10 @@ gem 'transaction_retry' # mitigate https://github.com/lobsters/lobsters-ansible/
 gem 'link_thumbnailer'
 gem 'remove_emoji'
 
+gem "shrine", "~> 3.0"
+gem "shrine-url", "~> 2.4"
+gem "image_processing", "~> 1.8"
+
 gem "scout_apm", "2.6.2"
 
 group :test, :development do

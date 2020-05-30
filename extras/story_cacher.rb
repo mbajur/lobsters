@@ -39,6 +39,13 @@ class StoryCacher
       # content = Boilerpipe::Extractors::LargestContentExtractor.text(content)
       doc = LinkThumbnailer.generate(story.url)
 
+      # Handle thumb
+      if doc.images.any?
+        story.thumb = { id: doc.images.first.src.to_s, storage: :cache }
+        story.thumb_derivatives!
+        story.thumb_attacher.promote
+      end
+
       # turn newlines into double newlines, so they become paragraphs
       content = doc.description.to_s.gsub("\n", "\n\n")
 

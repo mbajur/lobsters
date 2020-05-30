@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_19_000845) do
+ActiveRecord::Schema.define(version: 2020_05_30_182606) do
 
   create_table "comments", id: :bigint, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -199,6 +199,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_000845) do
     t.boolean "user_is_author", default: false
     t.boolean "user_is_following", default: false, null: false
     t.bigint "domain_id"
+    t.text "thumb_data"
     t.index ["created_at"], name: "index_stories_on_created_at"
     t.index ["description"], name: "index_stories_on_description", type: :fulltext
     t.index ["domain_id"], name: "index_stories_on_domain_id"

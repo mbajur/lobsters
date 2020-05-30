@@ -1,4 +1,6 @@
 class Story < ApplicationRecord
+  include StoryThumbUploader::Attachment(:thumb)
+
   belongs_to :user
   belongs_to :domain, optional: true
   belongs_to :merged_into_story,
