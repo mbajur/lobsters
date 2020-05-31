@@ -41,3 +41,44 @@ only screen and (-webkit-min-device-pixel-ratio: 2) {
 		background-position: 1px 1px;
 	}
 }
+
+/* Custom */
+.story-onebox {
+  max-width: 700px;
+  margin-top: 1em;
+}
+
+.story-onebox iframe {
+  width: 100%;
+}
+
+.story-onebox aside {
+  padding: 12px 25px 12px 12px;
+  border: 1px solid #ccc;
+}
+
+.story-onebox aside header {
+  margin-bottom: 0;
+}
+
+.story-onebox aside header a {
+  color: #888;
+  text-decoration: none;
+}
+
+.story-onebox aside .onebox-body {
+  clear: both;
+}
+
+.story-onebox aside .onebox-body img {
+  max-height: 150px;
+  max-width: 11%;
+  height: auto;
+  width: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.story-onebox aside .onebox-body p {
+  margin-bottom: 0;
+}
