@@ -41,6 +41,7 @@ gem "sitemap_generator" # for better search engine indexing
 gem 'transaction_retry' # mitigate https://github.com/lobsters/lobsters-ansible/issues/39
 gem 'link_thumbnailer'
 gem 'remove_emoji'
+gem 'onebox'
 
 gem "shrine", "~> 3.0"
 gem "shrine-url", "~> 2.4"
